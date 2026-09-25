@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT ME</title>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+
+<body>
+    <!-- Section 1: About Me -->
+    <section class="container">
+        <h2>1. About Me</h2>
+        <nav class="intruduction">
+            <div class="profile">
+                <img src="pic.jpeg" alt="me" class="profile-image">
+                <h2 class="profile-name">hii my name is nada reda</h2>
+            </div>
+        </nav>
+
+        <!-- Skills and Hobbies List -->
+        <h3>Skills & Hobbies</h3>
+        <ul>
+            <li>Web Development (HTML, CSS, JavaScript)</li>
+            <li>Editing</li>
+            <li>Reading</li>
+            <li>Photography</li>
+            <li>Problem Solving & Coding (C++, Python, Java)</li>
+            <li>Chattering (Pottery)</li>
+        </ul>
+    </section>
+
+    <!-- Section 2: Session Feedback Form -->
+    <section class="container">
+        <h2>2. Session Feedback Form</h2>
+
+        <form id="feedbackForm" action="https://formspree.io/f/xojopkab" method="POST" novalidate>            <!-- Formspree Redirect to Results Page -->
+            <input type="hidden" name="_next" value="results.html">
+
+            <!-- Person Name -->
+            <div class="form-group">
+                <label for="fullname">Person Name: <span class="required">*</span></label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+            </div>
+
+            <!-- Person Age -->
+            <div class="form-group">
+                <label for="age">Person Age: <span class="required">*</span></label>
+                <input type="number" id="age" name="age" min="1" max="120" required placeholder="Enter your age">
+            </div>
+
+            <!-- Satisfaction with Textbook -->
+            <div class="form-group">
+                <label for="textbook-satisfaction">Satisfaction with the Textbook: <span class="required">*</span></label>
+                <select id="textbook-satisfaction" name="textbook_satisfaction" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="not_satisfied">Not Satisfied</option>
+                </select>
+            </div>
+
+            <!-- Comment about textbook -->
+            <div class="form-group">
+                <label for="textbook-comment">Comment about textbook (Optional):</label>
+                <textarea id="textbook-comment" name="textbook_comment" rows="3" placeholder="Write your comments..."></textarea>
+            </div>
+
+            <!-- Satisfaction with Session Speed -->
+            <div class="form-group">
+                <label>Satisfaction with the Session Speed: <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="speed_satisfaction" value="very_fast" required> Very Fast</label>
+                    <label><input type="radio" name="speed_satisfaction" value="good"> Good</label>
+                    <label><input type="radio" name="speed_satisfaction" value="very_slow"> Very Slow</label>
+                </div>
+            </div>
+
+            <!-- Comment about session speed -->
+            <div class="form-group">
+                <label for="speed-comment">Comment about session speed (Optional):</label>
+                <textarea id="speed-comment" name="speed_comment" rows="3" placeholder="Write your comments..."></textarea>
+            </div>
+
+            <!-- Satisfaction with Session Clarity -->
+            <div class="form-group">
+                <label>Satisfaction with the Session Clarity: <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="clarity_satisfaction" value="clear" required> Clear</label>
+                    <label><input type="radio" name="clarity_satisfaction" value="vague"> Vague</label>
+                </div>
+            </div>
+
+            <!-- Comment about session clarity -->
+            <div class="form-group">
+                <label for="clarity-comment">Comment about session clarity (Optional):</label>
+                <textarea id="clarity-comment" name="clarity_comment" rows="3" placeholder="Write your comments..."></textarea>
+            </div>
+
+            <!-- Satisfaction with Session Output -->
+            <div class="form-group">
+                <label>Satisfaction with the Session Output: <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="output_satisfaction" value="beneficial" required> Beneficial</label>
+                    <label><input type="radio" name="output_satisfaction" value="vague"> Vague</label>
+                </div>
+            </div>
+
+            <!-- Comment about session output -->
+            <div class="form-group">
+                <label for="output-comment">Comment about session output (Optional):</label>
+                <textarea id="output-comment" name="output_comment" rows="3" placeholder="Write your comments..."></textarea>
+            </div>
+
+            <!-- Topics for next workshop -->
+            <div class="form-group">
+                <label>Choose topics for the next workshop (Optional):</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="next_topics" value="advanced_css"> Advanced CSS & Flexbox/Grid</label>
+                    <label><input type="checkbox" name="next_topics" value="javascript_basics"> JavaScript Fundamentals</label>
+                    <label><input type="checkbox" name="next_topics" value="responsive_design"> Responsive Web Design</label>
+                    <label><input type="checkbox" name="next_topics" value="git_github"> Version Control with Git & GitHub</label>
+                    <label><input type="checkbox" name="next_topics" value="web_accessibility"> Web Accessibility (a11y)</label>
+                </div>
+            </div>
+
+            <!-- Choose Peer for Level 1 Project -->
+            <div class="form-group">
+                <label for="peer-select">Choose for the peer that you want to work on the level 1 project with him: <span class="required">*</span></label>
+                <select id="peer-select" name="peer_partner" required>
+                    <option value="" disabled selected>Select a classmate</option>
+                    <option value="Nada">Nada</option>
+                    <option value="Mariam">Mariam</option>
+                    <option value="Habiba">Habiba</option>
+                    <option value="Mahy">Mahy</option>
+                    <option value="Kady">Kady</option>
+                    <option value="zeyad">zeyad</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+            
+            <!-- Hyperlink to Feedback Results Page -->
+            <p class="nav-link">
+                <a href="results.html">View Feedback Form Results Page &rarr;</a>
+            </p>
+
+            
+
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
